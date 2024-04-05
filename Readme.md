@@ -1,0 +1,3 @@
+# Team Strivers
+
+Ideation
