@@ -19,6 +19,19 @@ FarmerRouter.get("/:id", (req, res) => {
     });
 })
 
+FarmerRouter.post("/getbyemail", (req, res) => {
+    const email = req.body.email;
+    prisma.farmer.findUnique({
+        where: {
+            email: email
+        }
+    }).then((farmer) => {
+        res.send(farmer);
+    }).catch(err => {
+        res.send(err);
+    });
+})
+
 FarmerRouter.get("/:id/prediction", (req, res) => {
 
 })
