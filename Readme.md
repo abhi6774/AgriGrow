@@ -68,6 +68,6 @@ npm run dev
 This project was developed as part of the 36-hour hackathon WittyHack. We would like to express our gratitude to the organizers for providing this opportunity and to all contributors for their hard work and dedication.
 * Abhishek Mourya:
 * Aaryan Karma:
-* Gobhuli Vyas:
+* Godhuli Vyas:
 * Pragyan Patidar: Timepass kiya bss
 
