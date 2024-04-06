@@ -24,7 +24,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/Profile" element={<Profile />} />
+          {/* <Route path="/Profile" element={<Profile />} /> */}
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
