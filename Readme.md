@@ -72,5 +72,4 @@ This project was developed as part of the 36-hour hackathon wittyhacks. We would
 * Abhishek Mourya:
 * Aaryan Karma:
 * Godhuli Vyas:
-* Pragyan Patidar: Timepass kiya bss
-
+* Pragyan Patidar: 
