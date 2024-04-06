@@ -17,4 +17,4 @@ RUN cd server && \
 
 RUN cp -r web/dist server/web
 
-CMD [ "cd", "server"  ,"&&",,"npm", "run", "start" ]
+CMD [ "sh", "-c", "cd server && npm run start"]
