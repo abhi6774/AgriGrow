@@ -5,11 +5,7 @@ const FarmerRouter = Router();
 
 const prisma = PrismaService.getInstance()
 
-// FarmerRouter.post("/farmer", (req, res) => {
-    
-// })
-
-FarmerRouter.get("/farmer/:id/prediction", (req, res) => {
+FarmerRouter.get("/:id/prediction", (req, res) => {
 
 })
 

@@ -47,8 +47,8 @@ app.post("/api/v1/signup", (req, res) => {
     });
 })
 
-app.use("/api/v1", FarmerRouter);
-app.use("/api/v1", RegionsRouter);
+app.use("/api/v1/farmer", FarmerRouter);
+app.use("/api/v1/regions", RegionsRouter);
 
 app.use(express.static("./web"));
 
