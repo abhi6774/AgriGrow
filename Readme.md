@@ -15,6 +15,8 @@ The user(Farmer) gives basic data i.e. Name, Field Area, Location and it is feed
 # Features
 1. Categorises the crop demand and supply based on demography.
 2. Easy to use and scalable.
+3. Real time data on hand tips.
+4. Bridge gap between supply and chain.
 
 # Getting Started
 ## Prerequisites
