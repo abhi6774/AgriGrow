@@ -1,12 +1,13 @@
-import "./App.css"
+import * as React from 'react';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Link from '@mui/material/Link';
 
-function App() {
-
+export default function App() {
   return (
-    <div>    
-      Initial
-    </div>
-  )
+    <Container maxWidth="sm">
+        <Typography>This is html</Typography>
+    </Container>
+  );
 }
-
-export default App
