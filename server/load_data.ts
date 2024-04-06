@@ -54,6 +54,41 @@ async function connect_collections(service: PrismaService, data: typeof location
     }
 }
 
+function generateRandomNumber(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+async function generateRandomFarmer(prisma: PrismaService, count: number) {
+    const regions = await prisma.region.findMany({
+        select: {
+            id: true,
+            state: true,
+            district: true,
+        }
+    });
+
+    const crops = await prisma.crop.findMany({
+        select: {
+            id: true,
+            name: true,
+
+        }
+    });
+
+    
+    while(count--) {
+        const region = regions[generateRandomNumber(0, regions.length - 1)];
+        const crop = crops[generateRandomNumber(0, crops.length - 1)];
+        const land_area = generateRandomNumber(1, 100);
+        const name = `Farmer ${count}`;
+        const email = ``
+
+    }
+
+
+    
+}
+
 
 
 (async () => {
