@@ -1,5 +1,20 @@
 # Team Strivers
 
+# Introduction 
+AgriGrow is a web-based project aimed at revolutionizing agriculture using cutting-edge technologies. We collect basic farmer details and preferences for crops they intend to grow this season. Leveraging financial and local region data, the project provides optimal crop recommendations.
+
+
+# Problems being addressed
+
+Problem being addressed : Limited Access to Market Information: Lack of access to real-time market data and information about consumer preferences makes it difficult for farmers to make informed decisions.    
+Storage and Preservation: Inadequate storage facilities and post-harvest management practices result in crop spoilage and wastage, impacting both supply and demand dynamics.
+
+# Solution
+The user(Farmer) gives basic data i.e. Name, Field Area, Location and it is feeded in his profile. Based on the preferred crops, the user gets the most accurate crops to be grown to uplift financiability. 
+
+# Features
+1.  
+
 # Getting Started
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
