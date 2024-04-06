@@ -1,5 +1,7 @@
 import { initPrisma, PrismaService } from "./src/database";
 import location_wise_data from "./src/data/location_wise_data.json";
+import { faker } from "@faker-js/faker"
+
 
 function getSet() {
     const crops = new Set<string>();
@@ -71,7 +73,6 @@ async function generateRandomFarmer(prisma: PrismaService, count: number) {
         select: {
             id: true,
             name: true,
-
         }
     });
 
@@ -79,9 +80,27 @@ async function generateRandomFarmer(prisma: PrismaService, count: number) {
     while(count--) {
         const region = regions[generateRandomNumber(0, regions.length - 1)];
         const crop = crops[generateRandomNumber(0, crops.length - 1)];
-        const land_area = generateRandomNumber(1, 100);
-        const name = `Farmer ${count}`;
-        const email = ``
+        const land_area = generateRandomNumber(1, 50);
+        const name = faker.person.fullName();
+        const email = faker.internet.email(); 
+
+        const farmer = await prisma.farmer.create({
+            data: {
+                email,
+                name,
+                land_area,
+                region: {
+                    connect: {
+                        id: region.id
+                    }
+                },
+                crop_preference: {
+                    connect: {
+                        id: crop.id
+                    },
+                }
+            }
+        })
 
     }
 
@@ -96,5 +115,6 @@ async function generateRandomFarmer(prisma: PrismaService, count: number) {
     console.log("Connected to the database")
     const prisma = PrismaService.getInstance();
     // await load_location_data(prisma, location_wise_data);
-    connect_collections(prisma, location_wise_data);
+    // connect_collections(prisma, location_wise_data);
+    generateRandomFarmer(prisma, 100);
 })()

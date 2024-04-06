@@ -28,7 +28,7 @@ FarmerRouter.post("/getbyemail", (req, res) => {
     }).then((farmer) => {
         res.send(farmer);
     }).catch(err => {
-        res.send(err);
+        res.status(404).send(err);
     });
 })
 

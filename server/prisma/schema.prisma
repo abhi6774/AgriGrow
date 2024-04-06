@@ -9,7 +9,7 @@ datasource db {
 
 model Farmer {
   id              String   @id @default(auto()) @map("_id") @db.ObjectId
-  email        String   @unique
+  email           String   @unique
   name            String
   crop_preference Crop[]
   land_area       Int?
@@ -20,7 +20,7 @@ model Farmer {
 
 model Crop {
   id               String   @id @default(auto()) @map("_id") @db.ObjectId
-  name             String @unique
+  name             String   @unique
   demand           Int
   storage_capacity Int
   live_stock       Int
@@ -34,7 +34,7 @@ model Crop {
 
 model Region {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  state     String @unique
+  state     String   @unique
   district  String[]
   crops     Crop[]
   createdAt DateTime @default(now())
