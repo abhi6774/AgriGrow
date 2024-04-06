@@ -1,11 +1,14 @@
-import "./App.css"
+import { useState } from 'react'
+import './App.css'
+import { Box, Button, TextField, Typography } from '@mui/material';
 
-function App() {
-
+function App() {  
   return (
-    <div>    
-      Initial
-    </div>
+    <>
+      <Box>
+        <Typography>adasd</Typography>
+      </Box>
+    </>
   )
 }
 
