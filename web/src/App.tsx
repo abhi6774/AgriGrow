@@ -14,7 +14,7 @@ export default function App() {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-
+  
   console.log(user)
   
   return  isAuthenticated ? <Home /> : <button onClick={(e) => loginWithRedirect()}>Log In</button> //
