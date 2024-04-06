@@ -1,9 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,12 +8,37 @@ datasource db {
 }
 
 model Farmer {
-  id           String     @id @default(cuid()) @map("_id")
-  preference   Preference @relation(fields: [preferenceId], references: [id])
-  preferenceId String @unique
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  email        String   @unique
+  name            String
+  crop_preference Crop[]
+  land_area       Int?
+  region          Region[]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 }
 
-model Preference {
-  id String @id @default(cuid()) @map("_id")
-  Farmer Farmer?
+model Crop {
+  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  name             String @unique
+  demand           Int
+  storage_capacity Int
+  live_stock       Int
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  farmer           Farmer?  @relation(fields: [farmerId], references: [id])
+  farmerId         String?  @db.ObjectId
+  region           Region?  @relation(fields: [regionId], references: [id])
+  regionId         String?  @db.ObjectId
+}
+
+model Region {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  state     String @unique
+  district  String[]
+  crops     Crop[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  farmer    Farmer?  @relation(fields: [farmerId], references: [id])
+  farmerId  String?  @db.ObjectId
 }
