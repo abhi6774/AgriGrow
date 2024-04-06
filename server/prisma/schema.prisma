@@ -1,0 +1,15 @@
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+model Farmer {
+    id            String      @id @default(auto()) @map("_id") @db.ObjectId
+    preferences   Preferences @relation(fields: [preferencesId], references: [id])
+    preferencesId String      @db.ObjectId @unique
+}
+
+model Preferences {
+    id     String   @id @default(auto()) @map("_id") @db.ObjectId
+    Farmer Farmer
+}

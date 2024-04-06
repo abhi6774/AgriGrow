@@ -35,7 +35,7 @@ jobs:
 
     - name: 'Deploy Image'
       run: |
-        gcloud run deploy gitter \
+        gcloud run deploy farmer \
           --image ${{ secrets.ARTIFACT_REGION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/${{ secrets.REPO_NAME }}/${{ secrets.CONTAINER_NAME }} \
           --region us-central1 \
           --platform managed \

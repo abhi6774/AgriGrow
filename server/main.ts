@@ -8,5 +8,5 @@ app.use(express.static("./web"))
 
 
 app.listen(PORT, () => {
-    console.log(`http://localhost:${3020}`)
+    console.log(`http://localhost2:${3020}`)
 });
