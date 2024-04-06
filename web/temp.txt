@@ -1,0 +1,2 @@
+domain = dev-q4nec2ownojk57i5.us.auth0.com
+client id = BEemr2AmqrpH9H5VllyqLHFtJuwvnQ5C
