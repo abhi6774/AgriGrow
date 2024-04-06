@@ -4,18 +4,17 @@ WORKDIR /usr/local/app
 
 COPY . .
 
-RUN cd web
+EXPOSE 3020
 
-RUN npm install
+RUN cd web && \
+    npm install && \
+    npm run build
 
-RUN npm run build
 
-RUN cp -r dist ../server
+RUN cd server && \
+    npm install && \
+    npm run build
 
-RUN cd ../server
+RUN cp -r web/dist server/web
 
-RUN npm install
-
-RUN npx tsc
-
-CMD [ "npm", "run", "start" ]
+CMD [ "cd", "server"  ,"&&",,"npm", "run", "start" ]
