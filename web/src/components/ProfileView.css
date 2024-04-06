@@ -8,7 +8,7 @@ input {
     background-repeat: no-repeat;
     background-position: right 8px center;
     border: 1px solid black;
-    width: 50%;
+    width: 97%;
     height: 32px;
     font-size: 16px;
     border-radius: 4px;
@@ -39,7 +39,7 @@ input {
   .profilePic,
   .profileInput,
   #uploadBook {
-    width: 75vw;
+    width: 55vw;
     background-color: #91c8e456;
     border: 3px solid #333;
     border-radius: 15px;
@@ -57,6 +57,7 @@ input {
 }
 
   .inputRow {
+    width: 100%;
     margin-bottom: 12px;
   }
 
