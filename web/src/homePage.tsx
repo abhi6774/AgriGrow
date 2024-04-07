@@ -1,14 +1,11 @@
-import { Typography } from "@mui/material"
 import Form from './components/form'
 import Portal from './components/portal'
 import {useState} from 'react'
 
-const Home = () => {
+const Home = ({componentData}: {componentData: boolean}) => {
 
-    const [userStatus, setUserStatus] = useState(false)
-
-    return userStatus ? <Form /> : <Portal />
-
+    console.log(componentData)    
+    return componentData ? <Form /> : <Portal />
 }
 
 export default Home;

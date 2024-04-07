@@ -11,7 +11,7 @@ export default function portal(){
 
     const [component, setRenderComponent] = useState(true)
     
-    console.log(component)
+    // console.log(component)
 
     return <Box sx={{width: "100vw", height: "100vh"}}>
         <Box sx={{fontSize:"22px", maxWidth:"100vw", padding:".5rem 1rem", boxShadow:"0 0 15px #999"}}>

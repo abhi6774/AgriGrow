@@ -11,6 +11,27 @@ const ProfileView = () => {
         preference: "Wheat, Rice, xyz" 
     })
 
+    const [statedata, setstatedata] = useState([])
+
+    async function getState (){
+        fetch('http://localhost:3000/api/v1/regions/states')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+            setstatedata(data)
+        })
+        .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+        });
+      
+    }
+
+    getState()
+
     return <div className="containerOut">
     <div className="container">
         <h1>PROFILE</h1>
@@ -21,11 +42,14 @@ const ProfileView = () => {
                 <label htmlFor="email">Name</label> <br />
                 <input type="text" id="name" name="name" required placeholder={data.name} />
             </div>
-            <div className="inputRow">
-                <label htmlFor="full_name">Region</label> <br />
-                <input type="text" id="Region" name="Region" placeholder={data.region}
-                required />
-            </div>
+    
+            <label htmlFor="dropdown">Choose State:</label>
+            <select>
+                {statedata.map((input : any)=>{
+                    return <option value={input}>{input}</option>
+                })}
+            </select>
+
             <div className="inputRow">
                 <label htmlFor="contact">Field Area (in hectare)</label><br />
                 <input type="number" id="contact" name="contact" placeholder={data.fieldarea}
@@ -36,6 +60,7 @@ const ProfileView = () => {
                 <input type="text" id="adrress" name="address" placeholder={data.preference}
                 required />
             </div>
+
             <button type="submit" className="button-24">Save & Submit</button>
             </form>
         </div>

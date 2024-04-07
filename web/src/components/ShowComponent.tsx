@@ -6,7 +6,7 @@ import {useState} from 'react'
 
 const ShowComponent = ({somePropName}:{somePropName:boolean}) => {
 
-    console.log(somePropName)
+    // console.log(somePropName)
 
     return somePropName === true ? <PortalView /> : <ProfileView/> 
 
