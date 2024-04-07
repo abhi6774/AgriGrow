@@ -69,8 +69,8 @@ npm run dev
 ---
 
 # screenshots
-![img1](web\public\img1.jpeg)
-![img2](web\public\img2.jpeg)
+![img1](https://github.com/Wittyhacks4CR003/WH024_Team_Strivers/blob/main/web/public/img1.jpeg)
+![img2](https://github.com/Wittyhacks4CR003/WH024_Team_Strivers/blob/main/web/public/img2.jpeg)
 
 # Acknowledgment
 This project was developed as part of the 36-hour hackathon wittyhacks. We would like to express our gratitude to the organizers for providing this opportunity and to all contributors for their hard work and dedication.
