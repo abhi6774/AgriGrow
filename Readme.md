@@ -69,8 +69,8 @@ npm run dev
 ---
 
 # screenshots
-![img1](web\public\WhatsApp Image 2024-04-06 at 6.22.33 PM (1).jpeg)
-![img2](web\public\WhatsApp Image 2024-04-06 at 6.22.33 PM.jpeg)
+![img1](web\public\img1.jpeg)
+![img2](web\public\img2.jpeg)
 
 # Acknowledgment
 This project was developed as part of the 36-hour hackathon wittyhacks. We would like to express our gratitude to the organizers for providing this opportunity and to all contributors for their hard work and dedication.
