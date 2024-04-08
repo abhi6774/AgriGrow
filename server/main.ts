@@ -17,10 +17,6 @@ app.use(cors({
 app.use(express.json());    
 app.use(RequestLogger);
 
-app.get("/", (req, res) => {
-    res.send("Hello World");
-});
-
 
 app.post("/api/v1/signup", (req, res) => {
     const {email, name, land_area, state, district, crop_name } = req.body;
@@ -51,6 +47,10 @@ app.use("/api/v1/farmer", FarmerRouter);
 app.use("/api/v1/regions", RegionsRouter);
 
 app.use(express.static("./web"));
+
+app.get("*", (req, res) => {
+    res.sendFile("index.html", {root: "./web"});
+});
 
 (async () => {
     await initPrisma();

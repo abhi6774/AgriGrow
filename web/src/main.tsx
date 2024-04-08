@@ -14,10 +14,10 @@ const root = createRoot(rootElement);
 
 root.render(
   <Auth0Provider
-    domain="dev-q4nec2ownojk57i5.us.auth0.com"
-    clientId="BEemr2AmqrpH9H5VllyqLHFtJuwvnQ5C"
+    domain="dev-9lj3u2mo.us.auth0.com"
+    clientId="HKi5g5kTN2LMgWPY3HjmW2JYy1c9ye2t"
     authorizationParams={{
-      redirect_uri: window.location.origin
+      redirect_uri: window.location.origin+"/profile"
     }}
   >
     <React.StrictMode>

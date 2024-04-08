@@ -79,6 +79,7 @@ if (user) {
 // }
 
 return <div>
+  Login Page
   {isAuthenticated ? <Home componentData={needsform}/> : <button onClick={() => loginWithRedirect()}>Log In</button>}
 </div> 
 }
