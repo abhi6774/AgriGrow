@@ -1,11 +1,6 @@
-import * as React from 'react';
 import { useState } from 'react'
-import { TextField } from '@mui/material';
-// import Typography from '@mui/material/Typography';
-import { Box, Button } from '@mui/material';
 import { useAuth0 } from "@auth0/auth0-react";
 import Home from './homePage';
-import Form from "./components/form"
 
 export default function App() {
 
@@ -16,16 +11,15 @@ export default function App() {
     return <div>Loading...</div>;
   }
 
-  // console.log(user)
 
-  const datamain =
-  {
-    name: "aryankarma",
-    email: "aryankarma20@gmail.com",
-    land_area: 546,
-    state: "Madhya Pradesh",
-    crop_name: "Wheat"
-  }
+  // const datamain =
+  // {
+  //   name: "aryankarma",
+  //   email: "aryankarma20@gmail.com",
+  //   land_area: 546,
+  //   state: "Madhya Pradesh",
+  //   crop_name: "Wheat"
+  // }
 
   // set user.email
   const mailtemp = "Trey.Larkin@gmail.com";
@@ -85,6 +79,6 @@ if (user) {
 // }
 
 return <div>
-  {isAuthenticated ? <Home componentData={needsform}/> : <button onClick={(e) => loginWithRedirect()}>Log In</button>}
+  {isAuthenticated ? <Home componentData={needsform}/> : <button onClick={() => loginWithRedirect()}>Log In</button>}
 </div> 
 }

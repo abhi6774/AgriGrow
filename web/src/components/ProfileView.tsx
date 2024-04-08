@@ -1,15 +1,14 @@
-import { Typography } from "@mui/material"
 import {useState} from 'react'
 import './ProfileView.css'
 
 const ProfileView = () => {
 
-    const [data, setData] = useState({
+    const data = {
         name:"Aryan Karma",
         region: "Indore",
         fieldarea:"300",
         preference: "Wheat, Rice, xyz" 
-    })
+    }
 
     const [statedata, setstatedata] = useState([])
 

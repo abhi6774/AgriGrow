@@ -1,4 +1,4 @@
-import { Box, Link } from "@mui/material";
+import { Box } from "@mui/material";
 import PersonIcon from '@mui/icons-material/Person';
 
 function Nav() {
